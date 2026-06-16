@@ -1,0 +1,273 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Import iOS Glassmorphism Design System */
+@import './styles/glassmorphism.css';
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display',
+    'Inter', 'Segoe UI', 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  background: linear-gradient(
+    135deg,
+    #EAF2FF 0%,
+    #F8FAFC 100%
+  );
+
+  min-height: 100vh;
+  transition: background-color 0.3s ease;
+}
+
+.dark body {
+  background: linear-gradient(
+    135deg,
+    #0F172A 0%,
+    #1E293B 100%
+  );
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas,
+    'Courier New', monospace;
+}
+
+.auth-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.auth-card {
+  background: white;
+  border-radius: 20px;
+
+  box-shadow:
+    0 10px 30px rgba(0, 87, 255, 0.10);
+
+  border: 1px solid #E5E7EB;
+
+  padding: 2rem;
+  width: 100%;
+  max-width: 400px;
+}
+
+.dark .auth-card {
+  background: #1E293B;
+  border: 1px solid #334155;
+}
+
+.dashboard-container {
+  min-height: 100vh;
+
+  background: linear-gradient(
+    135deg,
+    #0057FF 0%,
+    #003EB3 100%
+  );
+
+  padding: 20px;
+}
+
+.dark .dashboard-container {
+  background: linear-gradient(
+    135deg,
+    #0F172A 0%,
+    #1E293B 100%
+  );
+}
+
+.card {
+  background: white;
+  border-radius: 20px;
+
+  border: 1px solid #E5E7EB;
+
+  box-shadow:
+    0 8px 24px rgba(0, 87, 255, 0.10);
+
+  padding: 2rem;
+  margin-bottom: 20px;
+}
+
+.dark .card {
+  background: #1E293B;
+  border: 1px solid #334155;
+}
+
+.btn-primary {
+  background: linear-gradient(
+    135deg,
+    #0057FF 0%,
+    #003EB3 100%
+  );
+
+  color: white;
+  padding: 12px 24px;
+  border-radius: 10px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 12px 30px rgba(0, 87, 255, 0.25);
+}
+
+.btn-secondary {
+  background: #F8FAFC;
+  color: #111827;
+
+  padding: 12px 24px;
+
+  border-radius: 10px;
+
+  border: 1px solid #E5E7EB;
+
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  width: 100%;
+}
+
+.btn-secondary:hover {
+  background: #EEF2FF;
+}
+
+.dark .btn-secondary {
+  background: #334155;
+  color: #F8FAFC;
+  border-color: #475569;
+}
+
+.dark .btn-secondary:hover {
+  background: #475569;
+}
+
+.input-field {
+  width: 100%;
+
+  padding: 12px;
+
+  border: 1px solid #D1D5DB;
+
+  border-radius: 10px;
+
+  font-size: 16px;
+
+  transition: all 0.3s ease;
+
+  background: white;
+  color: #111827;
+}
+
+.input-field:focus {
+  outline: none;
+
+  border-color: #0057FF;
+
+  box-shadow:
+    0 0 0 3px rgba(0, 87, 255, 0.15);
+}
+
+.dark .input-field {
+  background: #334155;
+  border-color: #475569;
+  color: #F8FAFC;
+}
+
+.dark .input-field:focus {
+  border-color: #3B82F6;
+
+  box-shadow:
+    0 0 0 3px rgba(59, 130, 246, 0.20);
+}
+
+.error-message {
+  color: #DC2626;
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+.success-message {
+  color: #16A34A;
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+.balance-display {
+  font-size: 2.5rem;
+  font-weight: bold;
+
+  color: #16A34A;
+
+  text-align: center;
+  margin: 20px 0;
+}
+
+.transaction-item {
+  background: #F8FAFC;
+
+  border-radius: 10px;
+
+  padding: 12px;
+  margin-bottom: 8px;
+
+  border-left: 4px solid #0057FF;
+}
+
+.dark .transaction-item {
+  background: #334155;
+  border-left-color: #3B82F6;
+}
+
+/* Scrollbar */
+
+.dark ::-webkit-scrollbar {
+  width: 8px;
+}
+
+.dark ::-webkit-scrollbar-track {
+  background: #334155;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #64748B;
+  border-radius: 4px;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
+
+/* App container */
+
+.app-container {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
