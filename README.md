@@ -1,4 +1,4 @@
-# Bank Simulation System
+# Bank Simulation 
 
 A full-stack banking simulation platform that provides users with a realistic digital banking experience. The application includes account management, transaction processing, loan services, bill payments, financial analytics, fraud monitoring, and AI-powered financial assistance.
 
